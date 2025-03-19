@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Showcase</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/showcase.css' %}">
+</head>
+<body>
+    <div class="main-container">
+        <div class="menu">
+            <a href="{% url 'showcase' %}" class="menu-btn">Home</a>
+            <a href="{% url 'profile' %}" class="menu-btn">My Profile</a>
+            <a href="{% url 'logout' %}" class="menu-btn">Logout</a>
+        </div>
+
+        <div class="content">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+</body>
+</html>

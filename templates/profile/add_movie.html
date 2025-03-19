@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Movie</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/profile/add_movie.css' %}">
+</head>
+<body>
+    <div class="main-container">
+        <div class="menu">
+            <h3>Menu</h3>
+            <ul>
+                <li><a href="/" class="menu-btn">Home</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="form-container">
+                <h2>Add New Movie</h2>
+                <form method="post" enctype="multipart/form-data"> <!-- Убедитесь, что enctype установлен -->
+                    {% csrf_token %}
+
+                    {% if form.errors %}
+                        <div class="error-message">
+                            <ul>
+                                {% for field in form %}
+                                    {% for error in field.errors %}
+                                        <li>{{ error }}</li>
+                                    {% endfor %}
+                                {% endfor %}
+                                {% for error in form.non_field_errors %}
+                                    <li>{{ error }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    {% endif %}
+
+                    <div class="input-group">
+                        <label for="title">Title:</label>
+                        {{ form.title }}
+                    </div>
+
+                    <div class="input-group">
+                        <label for="description">Description:</label>
+                        {{ form.description }}
+                    </div>
+
+                    <div class="input-group">
+                        <label for="age">Age Rating:</label>
+                        {{ form.age }}
+                    </div>
+
+                    <div class="input-group">
+                        <label for="genre">Genre:</label>
+                        {{ form.genre }}
+                    </div>
+
+                    <!-- Поле для ввода имени автора -->
+                    <div class="input-group">
+                        <label for="author">Author:</label>
+                        {{ form.author }}
+                    </div>
+
+                    <!-- Поле для выбора даты релиза -->
+                    <div class="input-group">
+                        <label for="release_date">Release Date:</label>
+                        {{ form.release_date }}
+                    </div>
+
+                    <!-- Поле для загрузки изображения -->
+                    <div class="input-group">
+                        <label for="preview_image">Preview Image:</label>
+                        {{ form.preview_image }}
+                    </div>
+
+                    <!-- Превью изображения -->
+                    <img id="image-preview" src="#" alt="Image Preview" style="display:none; width:200px; margin-top:10px;" />
+
+                    <!-- Поле для загрузки видео -->
+                    <div class="input-group">
+                        <label for="video_file">Video File:</label>
+                        {{ form.video_file }}
+                    </div>
+
+                    <button type="submit" class="btn">Submit Movie</button> <!-- Изменяем текст на кнопке -->
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript для предварительного просмотра изображения -->
+    <script>
+        document.getElementById("id_preview_image").addEventListener("change", function(event) {
+            const previewImage = document.getElementById("image-preview");
+
+            const file = event.target.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+
+                reader.onload = function(e) {
+                    previewImage.src = e.target.result;
+                }
+
+                reader.readAsDataURL(file);
+                previewImage.style.display = "block";
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+body {
+    background-color: #e8e8e8;
+}
+
+.main-container {
+    display: flex;
+    height: 100vh;
+}
+
+.menu {
+    width: 250px;
+    background-color: #2c3e50;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-btn {
+    display: block;
+    width: 100%;
+    background-color: #34495e;
+    color: #ecf0f1;
+    padding: 15px 20px;
+    border: none;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-btn:hover {
+    background-color: #1abc9c;
+    transform: scale(1.05);
+}
+
+.menu-btn:focus {
+    background-color: #16a085;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Выравнивание по верхнему краю */
+    background-color: #ecf0f1;
+}
+
+.genres-container {
+    width: 100%;
+}
+
+.genre-title {
+    font-size: 24px; /* Размер заголовка жанра */
+    margin-bottom: 10px; /* Отступ снизу */
+}
+
+.movies-grid {
+    display: flex; /* Используем flex для горизонтального выстраивания фильмов */
+    flex-wrap: wrap; /* Позволяет элементам переноситься на следующую строку */
+    gap: 20px; /* Отступы между карточками */
+}
+
+.movie-card {
+    background-color: #fff; /* Цвет фона карточки фильма */
+    border-radius: 10px; /* Закругленные углы */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Тень карточки */
+    overflow: hidden; /* Скрытие переполнения */
+    text-decoration: none; /* Убираем подчеркивание */
+    color: #2c3e50; /* Цвет текста */
+    text-align: left; /* Выровнять текст по левому краю */
+    padding: 10px; /* Отступы внутри карточки */
+
+    /* Установите максимальную ширину для карточек */
+    max-width: 200px; /* Вы можете изменить это значение по своему усмотрению */
+    padding-right: 0px;
+    padding-left: 18px;
+}
+
+.movie-card:hover {
+    transform: translateY(-10px); /* Подъем карточки при наведении */
+}
+
+.movie-image {
+    width: auto; /* Автоматическая ширина изображения для сохранения пропорций */
+    max-width: calc(100% - 20px); /* Максимальная ширина на всю карточку с учетом отступов */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+}
+
+.movie-title {
+    padding-top: 10px; /* Отступ сверху заголовка фильма */
+    font-size: 18px; /* Размер шрифта заголовка фильма */
+    font-weight: bold; /* Жирный шрифт */
+}
+
+.movie-author,
+.movie-age {
+   font-size: 14px; /* Размер шрифта для автора и возраста фильма */
+   color: gray; /* Цвет текста для автора и возраста */
+   margin-bottom: 5px; /* Отступ снизу от текста до следующего элемента */
+}
+
+.no-movies {
+   font-size: 20px; /* Размер шрифта для сообщения об отсутствии фильмов */
+   color: #7f8c8d; /* Цвет текста для сообщения об отсутствии фильмов */
+}
+
+
+.profile-container {
+    background-color: #fff; /* Цвет фона контейнера */
+    border-radius: 10px; /* Закругленные углы */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Тень контейнера */
+    padding: 20px; /* Отступы внутри контейнера */
+    max-width: 600px; /* Максимальная ширина контейнера */
+    margin: 20px auto; /* Центрирование контейнера с отступом сверху */
+}
+
+h2 {
+    font-size: 24px; /* Размер заголовка */
+    margin-bottom: 20px; /* Отступ снизу */
+    color: #2c3e50; /* Цвет заголовка */
+}
+
+p {
+    font-size: 18px; /* Размер текста для информации о пользователе */
+    margin-bottom: 10px; /* Отступ снизу */
+    color: #34495e; /* Цвет текста */
+}
+
+strong {
+    color: #5cb85c; /* Цвет для выделенного текста (например, "Username:", "Email:") */
+}
+
+.add-buttons {
+    margin-top: 20px; /* Отступ сверху для кнопок добавления фильмов */
+}
+
+.add-btn {
+    display: inline-block;
+    background-color: #5cb85c; /* Цвет фона кнопки добавления фильма */
+    color: white; /* Цвет текста кнопки */
+    padding: 10px 15px; /* Отступы внутри кнопки */
+    border-radius: 5px; /* Закругленные углы кнопки */
+    text-decoration: none; /* Убираем подчеркивание */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Плавные переходы */
+}
+
+.add-btn:hover {
+    background-color: #4cae4c; /* Цвет фона при наведении на кнопку */
+    transform: scale(1.05); /* Увеличение кнопки при наведении */
+}
+
+.add-btn:focus {
+    outline: none; /* Убираем обводку при фокусе */
+    box-shadow: 0 0 5px rgba(0, 200, 0, 0.5); /* Тень при фокусе */
+}
