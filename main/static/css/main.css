@@ -5,14 +5,27 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Calibre', sans-serif;
+    background: url("https://wallpapers.com/images/featured/movie-9pvmdtvz4cb0xl37.jpg") no-repeat center center fixed;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
 }
+
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
 
 .main-container {
     display: flex;
@@ -77,14 +90,14 @@ p {
 }
 
 .input-group input:focus {
-    border-color: #00aaff;
+    border-color:  #1c1c1c;
     outline: none;
 }
 
 .btn {
     width: 100%;
     padding: 14px;
-    background-color: #00aaff;
+    background-color:  #1c1c1c;
     color: #fff;
     font-size: 16px;
     border: none;
@@ -94,7 +107,7 @@ p {
 }
 
 .btn:hover {
-    background-color: #0088cc;
+    background-color:  #1c1c1c;
 }
 
 .toggle-form {
@@ -103,7 +116,7 @@ p {
 }
 
 .toggle-form a {
-    color: #00aaff;
+    color:  #1c1c1c;
     text-decoration: none;
 }
 
@@ -139,7 +152,7 @@ p {
     justify-content: space-between;
     width: 100%;
     padding: 20px;
-    background-color: #00aaff;
+    background-color: transparent;
     position: fixed;
     top: 0;
     left: 0;
@@ -148,6 +161,7 @@ p {
 .logo {
     display: flex;
     align-items: center;
+
 }
 
 .logo-icon {
@@ -157,9 +171,10 @@ p {
 }
 
 .logo-title {
+    font-family: 'Arial Black', sans-serif;
     font-size: 24px;
     font-weight: bold;
-    color: #fff;
+    color: #e50914;
 }
 
 .main-content {
@@ -171,23 +186,39 @@ p {
     text-align: center;
 }
 
+.logo {
+    background: rgba(28, 28, 28, 0.9);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.info-text-first {
+    font-size: 40px;
+    fond-weight: bold;
+    color: #e50914;
+}
+
 .info-text {
-    font-size: 18px;
+    font-size: 28px;
+    font-weight: bold;
     margin-bottom: 20px;
-    color: #555;
+    color: #e50914;
 }
 
 .login-btn {
     display: inline-block;
-    background-color: #00aaff;
-    color: #fff;
-    font-size: 16px;
+    background-color: rgba(28, 28, 28, 0.9);
+    color: #e50914;
+    font-size: 18px;
     padding: 12px 24px;
-    border-radius: 4px;
+    border-radius: 8px;
     text-decoration: none;
     transition: background-color 0.3s;
 }
 
 .login-btn:hover {
-    background-color: #0088cc;
+    background-color: #8c1904;
 }
+
