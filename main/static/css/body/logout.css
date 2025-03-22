@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Arial Black', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #1f1f1f;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +14,7 @@ body {
 }
 
 .logout-container {
-    background-color: #fff;
+    background-color: #141414;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
@@ -33,20 +33,31 @@ h2 {
 }
 
 .confirm-btn {
-    background-color: #00aaff;
+    background-color: #e50914;
     color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 12px 10px;
 }
 
 .confirm-btn:hover {
-    background-color: #0088cc;
+    background-color: #bbb;
 }
 
 .cancel-btn {
-    background-color: #ddd;
-    color: black;
-    margin-left: 10px;
+    background-color: #1f1f1f;
+    color: white;
+    margin-left: 18px;
+    padding: 11px 18px;
+    text-decoration: none;
 }
 
 .cancel-btn:hover {
     background-color: #bbb;
+}
+
+.confirm-btn, .cancel-btn {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
 }

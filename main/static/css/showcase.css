@@ -1,5 +1,5 @@
 body {
-    background-color: #e8e8e8;
+    background-color: #141414;
 }
 
 .main-container {
@@ -9,7 +9,7 @@ body {
 
 .menu {
     width: 250px;
-    background-color: #2c3e50;
+    background-color: #141414;
     padding: 20px 0;
     display: flex;
     flex-direction: column;
@@ -19,13 +19,13 @@ body {
 .menu-btn {
     display: block;
     width: 100%;
-    background-color: #34495e;
+    background-color: #1c1c1c;
     color: #ecf0f1;
-    padding: 15px 20px;
+    padding: 15px 2px;
     border: none;
     text-align: center;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: bolder;
     cursor: pointer;
     border-radius: 15px;
     text-transform: uppercase;
@@ -34,12 +34,12 @@ body {
 }
 
 .menu-btn:hover {
-    background-color: #1abc9c;
+    background-color: #e50914;
     transform: scale(1.05);
 }
 
 .menu-btn:focus {
-    background-color: #16a085;
+    background-color: #e50914;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -48,8 +48,8 @@ body {
     padding: 20px;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Выравнивание по верхнему краю */
-    background-color: #ecf0f1;
+    align-items: flex-start;
+    background-color: #1f1f1f;
 }
 
 .genres-container {
@@ -57,106 +57,105 @@ body {
 }
 
 .genre-title {
-    font-size: 24px; /* Размер заголовка жанра */
-    margin-bottom: 10px; /* Отступ снизу */
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
 .movies-grid {
-    display: flex; /* Используем flex для горизонтального выстраивания фильмов */
-    flex-wrap: wrap; /* Позволяет элементам переноситься на следующую строку */
-    gap: 20px; /* Отступы между карточками */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .movie-card {
-    background-color: #fff; /* Цвет фона карточки фильма */
-    border-radius: 10px; /* Закругленные углы */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Тень карточки */
-    overflow: hidden; /* Скрытие переполнения */
-    text-decoration: none; /* Убираем подчеркивание */
-    color: #2c3e50; /* Цвет текста */
-    text-align: left; /* Выровнять текст по левому краю */
-    padding: 10px; /* Отступы внутри карточки */
+    background-color: #141414;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-decoration: none;
+    color: #e50914;
+    text-align: left;
+    padding: 10px;
 
-    /* Установите максимальную ширину для карточек */
-    max-width: 200px; /* Вы можете изменить это значение по своему усмотрению */
+
+    max-width: 200px;
     padding-right: 0px;
     padding-left: 18px;
 }
 
 .movie-card:hover {
-    transform: translateY(-10px); /* Подъем карточки при наведении */
+    transform: translateY(-10px);
 }
 
 .movie-image {
-    width: auto; /* Автоматическая ширина изображения для сохранения пропорций */
-    max-width: calc(100% - 20px); /* Максимальная ширина на всю карточку с учетом отступов */
-    height: auto; /* Автоматическая высота для сохранения пропорций */
+    width: auto;
+    max-width: calc(100% - 20px);
+    height: auto;
 }
 
 .movie-title {
-    padding-top: 10px; /* Отступ сверху заголовка фильма */
-    font-size: 18px; /* Размер шрифта заголовка фильма */
-    font-weight: bold; /* Жирный шрифт */
+    padding-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-.movie-author,
 .movie-age {
-   font-size: 14px; /* Размер шрифта для автора и возраста фильма */
-   color: gray; /* Цвет текста для автора и возраста */
-   margin-bottom: 5px; /* Отступ снизу от текста до следующего элемента */
+   font-size: 14px;
+   color: gray;
+   margin-bottom: 5px;
 }
 
 .no-movies {
-   font-size: 20px; /* Размер шрифта для сообщения об отсутствии фильмов */
-   color: #7f8c8d; /* Цвет текста для сообщения об отсутствии фильмов */
+   font-size: 20px;
+   color: #fff;
 }
 
 
 .profile-container {
-    background-color: #fff; /* Цвет фона контейнера */
-    border-radius: 10px; /* Закругленные углы */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Тень контейнера */
-    padding: 20px; /* Отступы внутри контейнера */
-    max-width: 600px; /* Максимальная ширина контейнера */
-    margin: 20px auto; /* Центрирование контейнера с отступом сверху */
+    background-color: #141414;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
 }
 
 h2 {
-    font-size: 24px; /* Размер заголовка */
-    margin-bottom: 20px; /* Отступ снизу */
-    color: #2c3e50; /* Цвет заголовка */
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #e50914;
 }
 
 p {
-    font-size: 18px; /* Размер текста для информации о пользователе */
-    margin-bottom: 10px; /* Отступ снизу */
-    color: #34495e; /* Цвет текста */
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #fff;
 }
 
 strong {
-    color: #5cb85c; /* Цвет для выделенного текста (например, "Username:", "Email:") */
+    color: #e50914;
 }
 
 .add-buttons {
-    margin-top: 20px; /* Отступ сверху для кнопок добавления фильмов */
+    margin-top: 20px;
 }
 
 .add-btn {
     display: inline-block;
-    background-color: #5cb85c; /* Цвет фона кнопки добавления фильма */
-    color: white; /* Цвет текста кнопки */
-    padding: 10px 15px; /* Отступы внутри кнопки */
-    border-radius: 5px; /* Закругленные углы кнопки */
-    text-decoration: none; /* Убираем подчеркивание */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Плавные переходы */
+    background-color: #e50914;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .add-btn:hover {
-    background-color: #4cae4c; /* Цвет фона при наведении на кнопку */
-    transform: scale(1.05); /* Увеличение кнопки при наведении */
+    background-color: #e50914;
+    transform: scale(1.05);
 }
 
 .add-btn:focus {
-    outline: none; /* Убираем обводку при фокусе */
-    box-shadow: 0 0 5px rgba(0, 200, 0, 0.5); /* Тень при фокусе */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 200, 0, 0.5);
 }

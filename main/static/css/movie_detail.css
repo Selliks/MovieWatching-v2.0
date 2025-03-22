@@ -1,12 +1,27 @@
+body {
+    background-color: #1f1f1f;
+}
+
+
 .movie-detail-container {
+    background-color: #141414;
     display: flex;
     padding: 20px;
 }
 
 .movie-preview {
+    color: white;
     flex: 1;
     margin-right: 20px;
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background: #141414;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1;
 }
+
 
 .movie-detail-image {
     width: 50%;
