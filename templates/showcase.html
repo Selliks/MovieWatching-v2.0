@@ -1,34 +1,47 @@
-{% extends 'body.html' %}
-
-{% block head %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Showcase</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/showcase.css' %}">
-{% endblock %}
+</head>
+<body>
+    <div class="main-container">
+        <div class="menu">
+            <a href="{% url 'showcase' %}" class="menu-btn">Home</a>
+            <a href="{% url 'profile' %}" class="menu-btn">My Profile</a>
+            <a href="{% url 'logout' %}" class="menu-btn">Logout</a>
+        </div>
 
-{% block content %}
-    <div class="genres-container">
-        {% for genre, movies in movies_by_genre.items %}
-            <h2 class="genre-title">{{ genre.name }}</h2>
-            <div class="movies-grid">
-                {% if movies %}
-                    {% for movie in movies %}
-                        <a href="{% url 'movie_detail' movie.id %}" class="movie-card">
-                            <div class="movie-image-container">
-                                {% if movie.preview_image %}
-                                    <img src="{{ movie.preview_image.url }}" alt="{{ movie.title }}" class="movie-image">
-                                {% else %}
-                                    <img src="{% static 'images/default_image.png' %}" alt="Default Image" class="movie-image"> <!-- Замените на путь к вашему изображению по умолчанию -->
-                                {% endif %}
-                            </div>
-                            <h3 class="movie-title">{{ movie.title }}</h3>
-                            <p class="movie-author">Author: {{ movie.author }}</p>
-                            <p class="movie-age">Age: {{ movie.age }}</p>
-                        </a>
-                    {% endfor %}
-                {% else %}
-                    <p class="no-movies">Not now.</p>
-                {% endif %}
+        <div class="content">
+            <div class="genres-container">
+                {% for genre, movies in movies_by_genre.items %}
+                    <h2 class="genre-title">{{ genre.name }}</h2>
+                    <div class="movies-grid">
+                        {% if movies %}
+                            {% for movie in movies %}
+                                <a href="{% url 'movie_detail' movie.id %}" class="movie-card">
+                                    <div class="movie-image-container">
+                                        {% if movie.preview_image %}
+                                            <img src="{{ movie.preview_image.url }}" alt="{{ movie.title }}" class="movie-image">
+                                        {% else %}
+                                            <img src="{% static 'images/default_image.png' %}" alt="Default Image" class="movie-image">
+                                        {% endif %}
+                                    </div>
+                                    <h3 class="movie-title">{{ movie.title }}</h3>
+                                    <p class="movie-author">Author: {{ movie.author }}</p>
+                                    <p class="movie-age">Age: {{ movie.age }}</p>
+                                </a>
+                            {% endfor %}
+                        {% else %}
+                            <p class="no-movies">Not now.</p>
+                        {% endif %}
+                    </div>
+                {% endfor %}
             </div>
-        {% endfor %}
+        </div>
     </div>
-{% endblock %}
+</body>
+</html>

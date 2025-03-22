@@ -1,77 +1,92 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* Обновленный стиль для страницы Add Movie */
 
 body {
+    background-color: #141414;
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
 .main-container {
     display: flex;
-    width: 100%;
-    height: 100vh;
+    min-height: 100vh; /* Минимальная высота — вся высота экрана */
 }
 
 .menu {
-    width: 250px;
-    background-color: #333; /* Цвет фона меню */
-    color: #fff; /* Цвет текста меню */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh; /* Занимает всю высоту экрана */
+    width: 250px; /* Фиксированная ширина */
+    background-color: #141414; /* Цвет фона */
+    overflow-y: auto; /* Если меню будет длиннее экрана, добавит прокрутку */
 }
 
 .menu h3 {
-    padding: 20px; /* Отступы сверху и снизу заголовка меню */
-}
-
-.menu ul {
-    list-style-type: none; /* Убираем маркеры списка */
-}
-
-.menu li {
-    margin-bottom: 10px; /* Отступ между пунктами меню */
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 15px;
 }
 
 .menu-btn {
-    display: block; /* Делаем ссылку блочным элементом */
-    padding: 15px 20px; /* Отступы внутри кнопки */
-    color: white; /* Цвет текста кнопки */
-    text-decoration: none; /* Убираем подчеркивание */
-    background-color: #444; /* Цвет фона кнопки */
-    border-radius: 5px; /* Закругленные углы для кнопки */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Плавные переходы */
+    display: block;
+    width: 100%;
+    background-color: #1c1c1c;
+    color: #ecf0f1;
+    padding: 15px 0;
+    border: none;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bolder;
+    cursor: pointer;
+    border-radius: 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.menu-btn:hover {
-    background-color: #555; /* Цвет фона при наведении на кнопку */
-    transform: scale(1.05); /* Увеличение кнопки при наведении */
+.menu-btn:hover, .menu-btn:focus {
+    background-color: #e50914;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.menu ul {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu li {
+    width: 100%;
 }
 
 .content {
     flex: 1;
+    padding: 20px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 20px;
+    align-items: flex-start;
+    background-color: #1f1f1f;
 }
 
 .form-container {
-    background-color: #fff;
+    background-color: #141414;
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
+    color: white;
 }
 
 h2 {
     margin-bottom: 20px;
-    color: #333;
+    color: #e50914;
+    text-align: center;
 }
 
 .input-group {
@@ -79,32 +94,51 @@ h2 {
 }
 
 .input-group label {
-    font-size: 14px;
-    color: #777;
+    width: 100%;
+    text-align: left;
+    padding-left: 0;
+    margin-left: 0;
 }
 
 .input-group input,
 .input-group select,
 .input-group textarea {
-    width: 100%;
+    width: calc(100% - 20px);
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #444;
     border-radius: 4px;
+    background-color: #222;
+    color: white;
+    margin-left: 0;
 }
 
 .input-group input:focus,
 .input-group select:focus,
 .input-group textarea:focus {
-    border-color: #00aaff; /* Цвет рамки при фокусе */
+    border-color: #e50914;
+    outline: none;
 }
 
 .btn {
     width: 100%;
     padding: 14px;
-    background-color: #00aaff; /* Цвет фона кнопки отправки */
-    color: #fff; /* Цвет текста кнопки отправки */
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn:hover {
-   background-color: #0088cc; /* Цвет фона при наведении на кнопку отправки */
+    background-color: #d40813;
+    transform: scale(1.05);
+}
+
+#image-preview {
+    display: none;
+    width: 200px;
+    margin-top: 10px;
+    border-radius: 5px;
 }

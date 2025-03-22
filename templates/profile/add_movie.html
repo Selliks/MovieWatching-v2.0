@@ -18,7 +18,7 @@
         <div class="content">
             <div class="form-container">
                 <h2>Add New Movie</h2>
-                <form method="post" enctype="multipart/form-data"> <!-- Убедитесь, что enctype установлен -->
+                <form method="post" enctype="multipart/form-data">
                     {% csrf_token %}
 
                     {% if form.errors %}
