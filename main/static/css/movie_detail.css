@@ -2,6 +2,15 @@ body {
     background-color: #1f1f1f;
 }
 
+.menu-btn {
+    width: 100%;
+    padding: 8px 10px;
+    background-color: #e50914;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+}
 
 .movie-detail-container {
     background-color: #1f1f1f;
@@ -40,3 +49,4 @@ body {
 video {
     width: 100%;
 }
+

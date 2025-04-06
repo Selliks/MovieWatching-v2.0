@@ -1,3 +1,5 @@
+/* Обновленный стиль для страницы Add Movie */
+
 body {
     background-color: #141414;
     font-family: 'Arial', sans-serif;
@@ -139,4 +141,12 @@ h2 {
     width: 200px;
     margin-top: 10px;
     border-radius: 5px;
+}
+
+input[id$="-clear_id"] {
+    display: none;
+}
+
+label[for$="-clear_id"] {
+    display: none;
 }

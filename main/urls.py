@@ -2,7 +2,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path
 from .views import (main, showcase, login_view, registration_view, profile, add_movie, logout_view,
-                    get_movies_by_genre, movie_detail)
+                    get_movies_by_genre, movie_detail, movie_edit)
 
 urlpatterns = [
     path('', main, name='main'),
@@ -14,6 +14,7 @@ urlpatterns = [
     path('profile/add-movie/', add_movie, name='profile/add_movie'),
     path('logout/', logout_view, name='logout'),
     path('get_movies/', get_movies_by_genre, name='get_movies_by_genre'),
+    path('edit/<int:movie_id>/', movie_edit, name='movie_edit')
 ]
 
 if settings.DEBUG:

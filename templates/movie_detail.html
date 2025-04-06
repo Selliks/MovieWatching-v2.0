@@ -16,6 +16,8 @@
             <p><strong>Age Rating:</strong> {{ movie.age }}</p>
             <p><strong>Release Year:</strong> {{ movie.release_date.year }}</p>
             <p><strong>Author:</strong> {{ movie.author }}</p>
+            <a href="{% url 'movie_edit' movie.id %}" class="menu-btn">Edit Description</a>
+
         </div>
 
         <div class="movie-player">

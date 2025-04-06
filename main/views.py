@@ -56,6 +56,19 @@ def movie_detail(request, movie_id):
     return render(request, 'movie_detail.html', {'movie': movie})
 
 
+@login_required
+def movie_edit(request, movie_id):
+    movie = get_object_or_404(Movie, id=movie_id)
+    if request.method == 'POST':
+        form = MovieForm(request.POST, request.FILES, instance=movie)
+        if form.is_valid():
+            form.save()
+            return redirect('movie_detail', movie_id=movie.id)
+    else:
+        form = MovieForm(instance=movie)
+    return render(request, 'movie_edit.html', {'form': form, 'movie': movie})
+
+
 ''' FUNCTION OF THE GENRES '''
 
 
